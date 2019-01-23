@@ -44,7 +44,7 @@ def sample_next(ctx, T, k=4):
     import numpy as np
     ctx = ctx[-k:]
     if T.get(ctx) is None:
-        return
+        return ' '
     possible_char = list(T[ctx].keys())
     possible_values = list(T[ctx].values())
     return np.random.choice(possible_char, p=possible_values)
